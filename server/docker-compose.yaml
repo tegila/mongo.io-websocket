@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mongo:
+    container_name: 'mongo'
+    image: 'mongo'
+  mongoio:
+    image: mongo.io-websocket:latest
+    environment:
+      DATABASE_URL: mongo
+      PORT: 3000
+      DEBUG: 1
+    ports:
+      - 3000:3000
+    build: .

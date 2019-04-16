@@ -1,0 +1,13 @@
+{
+  "name": "mongo.io-websocket",
+  "version": "1.0.1",
+  "description": "Mongo.io Client",
+  "main": "src/index.js",
+  "author": "tegila",
+  "license": "ISC",
+  "dependencies": {
+    "common": "tegila/common",
+    "querybuilder": "tegila/querybuilder",
+    "socket.io-client": "^2.2.0"
+  }
+}
