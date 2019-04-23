@@ -13,6 +13,8 @@
     "common": "tegila/common",
     "j2m": "tegila/j2m",
     "querybuilder": "tegila/querybuilder",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "tweetnacl": "^1.0.1",
+    "tweetnacl-util": "^0.15.0"
   }
 }

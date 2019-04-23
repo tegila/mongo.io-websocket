@@ -2,7 +2,7 @@ const logger = process.env.DEBUG ? console.log : () => null;
 
 const socket_io_client = require("socket.io-client");
 const querybuilder = require("querybuilder");
-const {send, init_keypair } = require("./business");
+const {send, login, init_keypair } = require("./business");
 
 
 const wss = target => {
@@ -18,12 +18,11 @@ const wss = target => {
 
   const self = {
     init_keypair,
+    login: (privateKey) => login(socket, privateKey),
     qb: (database, collection) => {
       const _qb = querybuilder(database, collection)
       qb_instance = Object.assign(_qb, {
-        send: () => {
-          return send(socket, qb_instance.value());
-        }
+        send: () => send(socket, qb_instance.value())
       });
       return qb_instance;
     },

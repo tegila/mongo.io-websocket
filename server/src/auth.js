@@ -1,6 +1,3 @@
-const crypt = require('common')();
-const querystring = require('querystring');
-
 module.exports = {
   // ACL: User has access to this path ?
   check_acl: (profile, path, action) => {
